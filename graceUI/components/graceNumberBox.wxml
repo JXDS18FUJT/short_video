@@ -1,0 +1,5 @@
+<view class="grace-number-box" style="width:{{width}};">
+    <view catchtap="reduce" class="grace-number-box-doBtn" style="width:{{btnSize}}; height:{{btnSize}}; font-size:{{btnFontSize}}; line-height:{{btnSize}}; color:{{btnColr}};">-</view>
+    <input bind:blur="blur" class="grace-number-box-input" disabled="{{disabled}}" style="background:{{inputBG}}; height:{{inputHeight}}; line-height:{{inputHeight}}; font-size:{{inputFontSize}}; color:{{inputColor}}; padding:{{inputPadding}}; border-radius:{{inputBorderRadius}};" type="number" value="{{value}}"></input>
+    <view catchtap="add" class="grace-number-box-doBtn" style="width:{{btnSize}}; height:{{btnSize}}; font-size:{{btnFontSize}}; line-height:{{btnSize}}; color:{{btnColr}};">+</view>
+</view>

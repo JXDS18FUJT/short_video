@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500px" height="500px" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>电  话</title>
+    <defs>
+        <filter x="-37.5%" y="-37.5%" width="175.0%" height="175.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.111771163 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <path d="M19.4189359,22.3157805 C19.51581,22.3157805 20.0968357,21.8315664 20.2904901,21.7347235 C20.6778926,21.5410379 20.9684211,21.3473523 21.2589183,21.2505094 C23.2926488,20.3789553 25.035757,20.959981 27.3599847,23.7684228 C28.812627,25.5115623 29.199967,26.9642046 28.7157842,28.3200041 C28.3284129,29.2884323 27.4568275,30.0631436 26.1010593,30.8378862 C26.0041852,30.9347602 25.2294739,31.4189431 24.9389454,31.5157859 C21.6463208,33.5494851 13.9957692,28.901061 8.47579097,20.7663266 C2.95575022,12.7284038 1.50313916,4.10945525 4.89260663,1.97894444 L5.37682072,1.68841597 L5.86103484,1.39788753 C7.60420563,0.3326165 8.66944538,-0.151597594 9.92840203,0.0420880313 C11.1873587,0.235773688 12.3494725,1.20420188 13.2210579,2.94737266 C15.1579143,6.62733734 14.7705118,8.37050809 12.2526297,10.016836 C12.0589441,10.1136788 11.3810443,10.5010501 11.3810443,10.5978929 C10.7999874,10.9852642 11.7684156,13.5999891 14.2863289,17.0862994 C16.7073682,20.7663266 18.7410362,22.7999946 19.4189359,22.3157805 L19.4189359,22.3157805 Z" id="path-2"></path>
+        <filter x="-3.9%" y="-3.1%" width="107.7%" height="106.3%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="0.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="-1" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0452684523 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="小程序" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="短视频-首页" transform="translate(-314.000000, -401.000000)" fill-rule="nonzero">
+            <g id="编组-5" transform="translate(276.000000, 324.000000)">
+                <g id="编组-2" transform="translate(46.000000, 86.000000)">
+                    <g id="电--话" filter="url(#filter-1)" transform="translate(1.000000, 0.000000)">
+                        <rect id="矩形" fill="#000000" opacity="0" x="0" y="0" width="32" height="32"></rect>
+                        <g id="路径">
+                            <use fill="#FFFFFF" xlink:href="#path-2"></use>
+                            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,53 @@
+/* pages/user/wxRecord/wxRecord.wxss */
+/* pages/user/attention/attention.wxss */
+page{
+  background-color: #181B2E;
+}
+#wxRecord{
+  width: 100vw;
+ 
+  background-color: #181B2E;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+#attention .nobgColor{
+  background-color: transparent;
+
+}
+#attention .bgBlack{
+  background-color: #161823;
+}
+#attention .padding0{
+  padding: 0;
+}
+.attention{
+  padding: 0 32rpx;
+  margin-top: 32rpx;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  background-color: #181B2E;
+
+}
+.attention-logo{
+  width: 96rpx;
+  height: 96rpx;
+}
+.attention-mid{
+  margin-left: 16rpx;
+  color: #ffffff;
+  flex: 1;
+
+
+}
+.attention-button{
+  background-color: #07C160;
+  font-size: 24rpx;
+  line-height: 48rpx;
+  color: #ffffff;
+  padding: 4rpx 16rpx;
+  
+
+  text-align: center;
+  border-radius: 6rpx;
+
+}

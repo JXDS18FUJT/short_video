@@ -1,0 +1,8 @@
+{
+  "desc": "",
+  "remark":"appid:wxc013ad4fff69dcb2,appSerect:2c952bdd81e8ae9c571cb9b9593a4b25",
+  "rules": [{
+  "action": "allow",
+  "page": "*"
+  }]
+}

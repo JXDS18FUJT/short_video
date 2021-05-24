@@ -1,0 +1,365 @@
+<gracePage customHeader="{{false}}">
+  <view class="video-contain" slot="gBody">
+    <custom-tab-bar></custom-tab-bar>
+    <view class="top-nav" style="height:{{navigationBarHeight+'px'}}">
+      <view class="status-title" style="height:{{statusBarHeight+'px'}}"></view>
+    </view>
+    <view wx:if="{{!lists.length&&!isLoading}}">
+      <no-data txt="暂无数据" type="common"></no-data>
+    </view>
+    <swiper
+      bindchange="loadMoreVideo"
+      bindanimationfinish="swiperChange"
+      bindtap="tabVideo"
+      controls
+      circular="{{circular}}"
+      current="{{current}}"
+      duration="300"
+      skipHiddenItemLayout="{{true}}"
+      vertical="{{true}}"
+    >
+      <swiper-item wx:for="{{videoObjList}}" itemId="{{item.video_id}}" wx:if="{{item.video_id}}">
+        <view class="videoSwiperItem">
+          
+          <view class="videoFather">
+            <video 
+              wx:if="{{index==current || index+1==current || index-1==current}}"
+              bindplay="eventPlay" 
+              controls="{{false}}" 
+              enableProgressGesture="{{false}}" 
+              id="{{item.video_id}}"
+              objvideo 
+              data-index="{{index}}" 
+              loop="{{true}}" 
+              autoplay="{{index===0?true:false}}" 
+              bindtimeupdate="videoUpdate"
+              controlsectFit="contain" 
+              showCenterPlayBtn="{{false}}" 
+              showFullscreenBtn="{{false}}" 
+              showPlayBtn="{{false}}"
+              showProgress="{{false}}" 
+              src="{{item.url}}" 
+              vslideGestureInFullscreen="{{false}}"
+              object-fit="contain"
+            ></video>
+          </view>
+          
+
+          <!-- 底部的文字说明 -->
+          <!-- <cover-view class="intro" wx:if="{{!showShare}}">
+            <cover-view
+              style="  background-color: rgba(102, 102, 102, 0.45);padding-left:8rpx;border-radius:8rpx;overflow:hidden"
+              class="intro-name">
+              <cover-image src="/static/video/buy_car.png" s></cover-image>
+              <cover-view class="intro-name-text" style="padding-left:16rpx;">
+                Apple iPhone12ProMax
+              </cover-view>
+            </cover-view>
+            <cover-view class="intro-name">
+              <cover-view class="intro-name-text" style="background:none;margin-top:16rpx">
+                @{{ item.user.nickname }}
+              </cover-view>
+            </cover-view>
+            <cover-view class="intro-name">
+              <cover-view class="intro-name-text" style="background:none;margin-top:16rpx;font-size:24rpx;">
+                {{ item.content||'' }}
+              </cover-view>
+            </cover-view>
+          </cover-view> -->
+          <!-- 底部的文字说明 -->
+
+          <!-- 覆盖原生组件 -->
+
+          <!-- <cover-view class="cover-video-tools" wx:if="{{videoInfo}}">
+            <cover-view class="cover-control-wrap">
+              <button class="cover-item">
+                <cover-image class="cover-avatar" src="{{item.user.avatar}}"></cover-image>
+                <cover-image class="cover-add" wx:if="{{!item.is_follow}}" catchtap="flowerYou"
+                  src="../../static/images/icon_shop_add.png"></cover-image>
+              </button>
+              <button bindtap="tapToCall" data-phone="{{item.to_phone}}" class="cover-item"
+                wx:if="{{userInfo.telphone}}">
+                <cover-image class="cover-icon cover-icon-like" src="../../static/video/phone.svg"></cover-image>
+                <cover-view class="cover-txt" style="font-size:24rpx">打电话</cover-view>
+                <cover-view class="cover-txt">{{ item.to_phone_num }}</cover-view>
+              </button>
+              <button bindgetphonenumber="loginToCall" data-phone="{{item.to_phone}}"
+                class="cover-item" openType="getPhoneNumber" wx:else>
+                <cover-image class="cover-icon cover-icon-like" src="../../static/video/phone.svg"></cover-image>
+                <cover-view class="cover-txt" style="font-size:24rpx">打电话</cover-view>
+                <cover-view class="cover-txt">{{item.to_phone_num}}</cover-view>
+              </button>
+              <button bindtap="tapToContact" class="cover-item">
+                <cover-image class="cover-icon cover-icon-like" src="../../static/video/wechat.svg"></cover-image>
+                <cover-view class="cover-txt" style="font-size:24rpx">加微信</cover-view>
+                <cover-view class="cover-txt">{{item.to_wx_num}}</cover-view>
+              </button>
+              <button data-name="{{item.adress_name}}" data-adress="{{item.adress}}"
+                bindtap="tapToMap" class="cover-item">
+                <cover-image class="cover-icon icon-like" src="../../static/video/navigation.svg"></cover-image>
+                <cover-view class="cover-txt" style="font-size:24rpx">地图导航</cover-view>
+              </button>
+              <button class="cover-item">
+                <cover-image bindtap="setShow" data-key="showShare" overlay="{{true}}"
+                  class="cover-icon cover-icon-like" src="../../static/video/share.svg"></cover-image>
+                <cover-view class="cover-txt">分享</cover-view>
+                <cover-view class="cover-txt">{{item.to_share_num}}</cover-view>
+              </button>
+            </cover-view>
+          </cover-view> -->
+
+
+          <!-- 头像旋转效果 -->
+          <!-- <cover-view class="bottomAvatarView">
+            <cover-view class="rotateAvatar">
+              <cover-image class="rotateAvatarImage" src="{{item.user.avatar}}"></cover-image>
+            </cover-view>
+          </cover-view> -->
+
+          <!-- 音乐特效 -->
+          <!-- <cover-view class="musicIcon">
+            <cover-view class="musicIconView">
+              <cover-image class="musicIconImage musicIconItemA" src="../../static/images/icon_music_1.png">
+              </cover-image>
+              <cover-image class="musicIconImage musicIconItemB" src="../../static/images/icon_music_2.png">
+              </cover-image>
+              <cover-image class="musicIconImage musicIconItemC" src="../../static/images/icon_music_3.png">
+              </cover-image>
+            </cover-view>
+          </cover-view> -->
+
+
+          <!-- 视频控件 -->
+          <!-- <cover-image bindtap="tabVideo" class="play-btn" src="../../static/images/btn_play.png" wx:if="{{playStatus}}">
+          </cover-image>
+          <cover-view bindtap="openItem" class="video-goods" data-id="{{videoInfo.item.item_id}}"
+            wx:if="{{videoInfo.item&&showGoods}}">
+            <cover-image src="{{videoInfo.item.thumb}}"></cover-image>
+            <cover-image catchtap="hideGoods" class="icon-hide" src="../../static/images/icon_close.png"></cover-image>
+          </cover-view>
+          <view class="video-info" wx:if="{{videoInfo.shopname}}">
+            <view bindtap="openItem" class="video-item" data-id="{{videoInfo.item.item_id}}" wx:if="{{videoInfo.item}}">
+              <image class="item-cart" src="../../static/video/icon_mini_cart.png"></image>
+              <view class="item-title">{{videoInfo.item.title}}</view>
+            </view>
+            <view class="shopname">@{{videoInfo.shopname}}</view>
+            <view class="videotitle">{{videoInfo.title}}</view>
+          </view> -->
+
+
+          <!-- 视频底部文字说明 非覆盖原生组件 -->
+          <view class="intro" wx:if="{{!showShare}}">
+            <view
+              style="  background-color: rgba(102, 102, 102, 0.45);padding-left:8rpx;border-radius:8rpx;overflow:hidden"
+              class="intro-name">
+              <image src="/static/video/buy_car.png" s></image>
+              <view class="intro-name-text" style="padding-left:16rpx;">
+                Apple iPhone12ProMax
+              </view>
+            </view>
+            <view class="intro-name">
+              <view class="intro-name-text" style="background:none;margin-top:16rpx">
+                @{{ item.user.nickname }}
+              </view>
+            </view>
+            <view class="intro-name">
+              <view class="intro-name-text" style="background:none;margin-top:16rpx;">
+                {{ item.content||'' }}
+              </view>
+            </view>
+          </view>
+
+          <!-- 视频右侧按钮 非覆盖 -->
+          <view class="cover-video-tools" wx:if="{{videoInfo}}">
+            <view class="cover-control-wrap">
+              <button class="cover-item">
+                <image class="cover-avatar" src="{{item.user.avatar}}"></image>
+                <image class="cover-add" wx:if="{{!item.is_follow}}" catchtap="flowerYou"
+                  src="../../static/images/icon_shop_add.png"></image>
+              </button>
+              <button bindtap="tapToCall" data-phone="{{item.to_phone}}" class="cover-item"
+                wx:if="{{userInfo.telphone}}">
+                <image class="cover-icon cover-icon-like" src="../../static/video/phone.svg"></image>
+                <view class="cover-txt" style="font-size:24rpx">打电话</view>
+                <view class="cover-txt">{{ item.to_phone_num }}</view>
+              </button>
+              <button bindgetphonenumber="loginToCall" data-phone="{{item.to_phone}}"
+                class="cover-item" openType="getPhoneNumber" wx:else>
+                <image class="cover-icon cover-icon-like" src="../../static/video/phone.svg"></image>
+                <view class="cover-txt" style="font-size:24rpx">打电话</view>
+                <view class="cover-txt">{{item.to_phone_num}}</view>
+              </button>
+              <button bindtap="tapToContact" class="cover-item">
+                <image class="cover-icon cover-icon-like" src="../../static/video/wechat.svg"></image>
+                <view class="cover-txt" style="font-size:24rpx">加微信</view>
+                <view class="cover-txt">{{item.to_wx_num}}</view>
+              </button>
+              <button data-name="{{item.adress_name}}" data-adress="{{item.adress}}"
+                bindtap="tapToMap" class="cover-item">
+                <image class="cover-icon icon-like" src="../../static/video/navigation.svg"></image>
+                <view class="cover-txt" style="font-size:24rpx">地图导航</view>
+              </button>
+              <button class="cover-item">
+                <image bindtap="setShow" data-key="showShare" overlay="{{true}}"
+                  class="cover-icon cover-icon-like" src="../../static/video/share.svg"></image>
+                <view class="cover-txt">分享</view>
+                <view class="cover-txt">{{item.to_share_num}}</view>
+              </button>
+            </view>
+          </view>
+
+          <!-- 头像旋转效果 非覆盖 -->
+          <view class="bottomAvatarView">
+            <view
+              class="rotateAvatar"
+            >
+              
+              <image class="rotateAvatarBgImage" src="../../static/images/icon_disk.png" />
+              
+              <image class="rotateAvatarImage" src="{{item.user.avatar}}"></image>
+              
+            </view>
+          </view>
+
+          <!-- 音乐特效 非覆盖 -->
+          <view class="musicIcon">
+            <view class="musicIconView">
+              <image class="musicIconImage musicIconItemA" src="../../static/images/icon_music_1.png">
+              </image>
+              <image class="musicIconImage musicIconItemB" src="../../static/images/icon_music_2.png">
+              </image>
+              <image class="musicIconImage musicIconItemC" src="../../static/images/icon_music_3.png">
+              </image>
+            </view>
+          </view>
+
+          <!-- 视频控件 非覆盖 -->
+          <image bindtap="tabVideo" class="play-btn" src="../../static/images/btn_play.png" wx:if="{{playStatus}}">
+          </image>
+          <view bindtap="openItem" class="video-goods" data-id="{{videoInfo.item.item_id}}"
+            wx:if="{{videoInfo.item&&showGoods}}">
+            <image src="{{videoInfo.item.thumb}}"></image>
+            <image catchtap="hideGoods" class="icon-hide" src="../../static/images/icon_close.png"></image>
+          </view>
+          <view class="video-info" wx:if="{{videoInfo.shopname}}">
+            <view bindtap="openItem" class="video-item" data-id="{{videoInfo.item.item_id}}" wx:if="{{videoInfo.item}}">
+              <image class="item-cart" src="../../static/video/icon_mini_cart.png"></image>
+              <view class="item-title">{{videoInfo.item.title}}</view>
+            </view>
+            <view class="shopname">@{{videoInfo.shopname}}</view>
+            <view class="videotitle">{{videoInfo.title}}</view>
+          </view>
+
+
+        </view>
+      </swiper-item>
+    </swiper>
+
+
+
+    <cover-view class="slideTipDialog">
+
+    </cover-view>
+
+
+
+    <!-- 展示分享的组件 -->
+    <van-share-sheet bindselect="selectShare" data-key="showShare" openType="share" show="{{ showShare }}"
+      title="立即分享给好友" options="{{ shareOptions }}" bind:close="setShow"></van-share-sheet>
+    <!-- 展示分享的组件 -->
+    
+
+
+
+    <!-- 展示微信号 -->
+    <van-popup round z-index="{{101}}" show="{{ isShowWxNo }}" data-key="isShowWxNo" catch:close="setShow">
+      <view class="wxNoDialog">
+        <view class="wxNoDialog-title">
+          {{ videoObjList[current].user&&videoObjList[current].user.nickname}}
+        </view>
+        <view class="wxNoDialog-tip">保存二维码、扫一扫或复制微信号添加客服</view>
+        <image class="wxNoDialog-scanImg" src="{{videoObjList[current].wx_img}}"></image>
+        <view class="wxNoDialog-tip">微信号：{{videoObjList[current].to_wx}}</view>
+        <view class="wxNoDialog-button">
+          <view bindtap="saveCodeImg" data-url="{{videoObjList[current].wx_img}}">保存二维码</view>
+          <view bindtap="copyWxNo" data-text="{{videoObjList[current].wx_img}}">复制微信号</view>
+        </view>
+      </view>
+    </van-popup>
+    <!-- 展示微信号 -->
+    <!-- 展示海报 -->
+    <van-popup round show="{{ isShowPoster }}" data-key="isShowPoster" custom-class="poster" data-key="isShowPoster"
+      bind:close="closePhoster">
+      <view class="poster">
+        <image class="posterImg" src="{{videoObjList[current].porter_img}}"></image>
+        <van-button size="mini" bindtap="saveCodeImg" data-url="{{videoObjList[current].porter_img}}" round
+          custom-class="posterSave" type="info">
+          <view data-url="{{videoObjList[current].porter_img}}" style="line-height:48rpx;font-size:24rpx">
+            保存图像
+          </view>
+        </van-button>
+      </view>
+    </van-popup>
+    <!-- 展示海报 -->
+    <!-- 视频进度条 -->
+    <view class="video-progress">
+      <view class="progress-inner" style="width:{{progress}}%"></view>
+    </view>
+    <!-- 咨询窗口 -->
+    <graceDialog isCloseBtn="{{false}}" isTitle="{{false}}" show="{{showAlert}}">
+      <view class="box-alert" slot="content">
+        <view class="hd">
+          <image class="alert-banner" src="{{shopInfo.banner}}"></image>
+        </view>
+        <view class="bd">您好，欢迎您来到{{shopInfo.name}}，请问有什么能帮到您？</view>
+      </view>
+      <view class="grace-space-between grace-border-t" slot="btns">
+        <button bindgetuserinfo="getUserInfo" class="grace-dialog-buttons grace-border-r" lang="zh_CN"
+          openType="getUserInfo">
+          稍后咨询
+        </button>
+        <button bindgetphonenumber="loginToContact" class="grace-dialog-buttons" openType="getPhoneNumber">
+          立即咨询
+        </button>
+      </view>
+    </graceDialog>
+    <!-- 客服窗口 -->
+    <graceDialog isCloseBtn="{{false}}" isTitle="{{false}}" show="{{showWechat}}">
+      <view class="box-alert" slot="content">
+        <view class="hd">
+          <image class="alert-banner" src="{{shopInfo.banner}}"></image>
+        </view>
+        <view class="bd">您好，已为您对接{{shopInfo.name}}客服，点击下面按钮与可与客服对话。</view>
+      </view>
+      <view class="grace-space-between grace-border-t" slot="btns">
+        <button bindgetuserinfo="getUserInfo" class="grace-dialog-buttons grace-border-r" lang="zh_CN"
+          openType="getUserInfo" wx:if="{{userInfo.nickname==''||userInfo.nickname==null}}">
+          稍后咨询
+        </button>
+        <button bindtap="closeContact" class="grace-dialog-buttons grace-border-r" lang="zh_CN" wx:else>
+          稍后咨询
+        </button>
+        <button class="grace-dialog-buttons" openType="contact">立即咨询</button>
+      </view>
+    </graceDialog>
+
+
+
+
+    <!-- 上滑精彩内容 -->
+    <graceShade background="rgba(0, 0, 0, 0.8)" show="{{showGuide}}" zIndex="999999">
+      <view class="grace-guide">
+        <text class="grace-chevron"></text>
+        <text class="grace-chevron"></text>
+        <text class="grace-chevron"></text>
+        <text class="grace-alert">向上滑动还有精彩内容</text>
+        <button bindtap="closeGuide" class="grace-button grace-gtbg-green" type="primary">
+          知道了
+        </button>
+      </view>
+    </graceShade>
+    <!-- 上滑精彩内容 -->
+
+
+  </view>
+</gracePage>

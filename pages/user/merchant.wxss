@@ -1,0 +1,130 @@
+/* pages/user/index.wxss */
+#user {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(22, 24, 35, 1);
+
+}
+
+.headBg {
+  width: 750rpx;
+  height: 100rpx;
+  font-size: 0;
+  display: flex;
+}
+
+#user .bgBlack {
+  background-color: rgba(22, 24, 35, 1);
+
+}
+#user .blackBorder{
+  border: none;
+}
+
+#user .white {
+  color: #fff;
+
+}
+#user .black {
+  color: #333333;
+
+}
+
+.message {
+  width: 750rpx;
+  height: 250rpx;
+  background-color: rgba(22, 24, 35, 1);
+  position: relative;
+}
+.message-image{
+  position: absolute;
+  left: 32rpx;
+  top: 0;
+}
+.message-image>image{
+  width: 160rpx;
+  height: 160rpx;
+  border: 50%;
+  transform: translate(0%,-46rpx);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.message-num {
+
+  width: calc(100% - 192rpx);
+  margin-left: 192rpx;
+  color: white;
+  font-size: 28rpx;
+  padding: 32rpx 0 42rpx 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+
+}
+
+.brand {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  color: #fff;
+  height: 134rpx;
+}
+
+.brandBox {
+  width: 684rpx;
+  margin-top: 16rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.twoData {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  background: rgba(24, 27, 46, 1);
+  align-content: center;
+  align-items: center;
+
+}
+
+.singleData {
+  width: 49.5%;
+  height: 160rpx;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+
+
+}
+.singleData>view>view{
+  font-size: 32rpx;
+}
+
+.singleData-border {
+  width: 1px;
+  height: 96rpx;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.cell {
+  padding-top: 32rpx;
+
+}
+
+.shareButton {
+  margin-top: 120rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+#user .addvideo-button{
+  margin: 0 auto;
+  width: 686rpx;
+  margin-left: 32rpx;
+  margin-bottom: 36rpx;
+
+}

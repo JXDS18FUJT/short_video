@@ -1,0 +1,1 @@
+<text style="font-size:{{fontSize}}; font-weight:{{fontWeight}}; color:{{color}}; line-height:{{lineHeight}};">{{numAnimate}}</text>

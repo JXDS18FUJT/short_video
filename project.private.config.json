@@ -1,0 +1,77 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "登录入口",
+          "pathName": "pages/loginEntrance/loginEntrance",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的(商户)",
+          "pathName": "pages/user/merchant",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的(用户)",
+          "pathName": "pages/user/user",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "关注",
+          "pathName": "pages/user/attention/attention",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "加微信列表",
+          "pathName": "pages/user/wxRecord/wxRecord",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "通话记录",
+          "pathName": "pages/user/phoneRecord/phoneRecord",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "修改用户",
+          "pathName": "pages/user/editUser/editUser",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "视频管理",
+          "pathName": "pages/user/videoManage/videoManage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发现",
+          "pathName": "pages/news/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "视频页面",
+          "pathName": "pages/index/index",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

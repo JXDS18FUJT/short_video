@@ -1,0 +1,107 @@
+.grace-add-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grace-add-list-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.grace-add-list-btn-text {
+    font-size: 26rpx;
+    line-height: 36rpx;
+    text-align: center;
+    color: #999999;
+    width: 100%;
+}
+
+.grace-add-list-btn-icon {
+    font-size: 80rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin-bottom: 20rpx;
+    color: #999999;
+}
+
+.grace-add-list-items {
+    width: 222rpx;
+    height: 222rpx;
+    overflow: hidden;
+    margin-bottom: 10rpx;
+    margin-right: 11rpx;
+    background: #F6F7F8;
+    font-size: 0;
+    position: relative;
+    border-radius: 10rpx;
+}
+
+.grace-add-list-image {
+    width: 222rpx;
+}
+
+.grace-add-list-remove {
+    width: 50rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+    font-size: 40rpx;
+    font-family: "grace-iconfont"!important;
+    position: absolute;
+    z-index: 5;
+    right: 10rpx;
+    top: 10rpx;
+    color: #888888;
+}
+
+.grace-add-list-remove::before {
+    content: "\e632";
+}
+
+.upload-progress {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 10rpx;
+    width: 180rpx;
+    padding: 0 21rpx;
+}
+
+.grace-add-list-reup {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    top: 0rpx;
+    width: 222rpx;
+    height: 222rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.3);
+    flex-direction: column;
+}
+
+.grace-add-list-reup-icon {
+    width: 100%;
+    color: #FFFFFF;
+    display: block;
+    font-size: 80rpx;
+    line-height: 100rpx;
+    text-align: center;
+    font-family: "grace-iconfont"!important;
+}
+
+.grace-add-list-reup-icon::before {
+    content: "\e635";
+}
+
+.grace-add-list-reup-text {
+    width: 100%;
+    color: #FFFFFF;
+    display: block;
+    font-size: 20rpx;
+    line-height: 30rpx;
+    text-align: center;
+}

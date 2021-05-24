@@ -1,0 +1,24 @@
+<!--pages/user/attention/attention.wxml-->
+<view id="wxRecord">
+  <van-search model:value="{{ keyWord }}" label="" placeholder="输入品牌名称进行搜索" use-action-slot background="#181B2E" shape="round">
+    <view slot="action" style="color:#6D7278" bind:tap="getSearch">搜索</view>
+  </van-search>
+  <view style=" padding-bottom: 50rpx;">
+    <view class="attention" wx:for="{{listData}}">
+      <image class="attention-logo" src="{{item.from_user.avatar}}"></image>
+      <view class="attention-mid">
+        <view>{{item.from_user.nickname}}</view>
+        <view style="font-size:24rpx;color:#6D7278">微信号:{{item.to_wx}}</view>
+
+      </view>
+      <view bindtap="copyWxNo" data-text="{{item.to_wx}}" class="attention-button">
+        <text style="font-size:24rpx;">复制微信号</text>
+      </view>
+
+    </view>
+    
+
+  </view>
+  <custom-tab-bar selected="3"></custom-tab-bar>
+
+</view>

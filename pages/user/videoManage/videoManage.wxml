@@ -1,0 +1,64 @@
+<!--pages/user/videoManage/videoManage.wxml-->
+<view id="videoManage">
+  <custom-tab-bar selected="3"></custom-tab-bar>
+  <diy-edit-video data-key="isShowAddVideo" bindsend="setShow"  editItem="{{editItem}}"  model:show="{{isShowAddVideo}}"></diy-edit-video>
+  <!-- <van-popup z-index="102" data-key="isShowAddVideoSelect" position="bottom" round show="{{isShowAddVideoSelect}}">
+    <van-picker title="视频状态" value-key="text" columns="{{videoStatusColumns}}" data-key="isShowAddVideoSelect"
+      show-toolbar title="标题" bind:cancel="setShow" bind:confirm="setEditFormVideoStatus" />
+  </van-popup> -->
+
+  <!-- 新增视频 -->
+  <!-- <van-popup z-index="101" round show="{{ isShowAddVideo }}" position="bottom" data-key="isShowAddVideo"
+    bind:close="setShow">
+    <view class="bookHead">
+      <text style="color:#ffffff;font-size:28rpx;">确定</text>
+      <text style="color:#323233;font-size:32rpx;font-weight:600">编辑视频</text>
+      <text style="color:#969799;font-size:28rpx" bindtap="onPopupClose" data-key="isShowAddVideo"
+        data-item="productLookForm" bindtap="setShow">取消</text>
+
+    </view>
+    <view>
+      <view style="padding-left:32rpx">
+        <van-uploader name="上传视频" upload-text="上传视频" bind:after-read="uploadVideo"
+          file-list="{{editItem.videoFileList}}" accept="media" max-duration="600">
+        </van-uploader>
+
+      </view>
+      <view  style="padding-left:32rpx">
+        <van-uploader name="上传图片" upload-text="上传图片" bind:after-read="uploadImage"
+          file-list="{{editItem.coverFileList}}" accept="image" max-duration="600">
+        </van-uploader>
+      </view>
+      <van-field bindtap="setShow" input-class="black" data-key="isShowAddVideoSelect" disabled label-class="black"
+        autosize value="{{editItem.is_show==1?'显示':'隐藏'}}" input-class="black"  label="视频状态" placeholder="点击选择" border="{{ false }}" />
+      <van-field value="{{editItem.to_phone}}" autosize bind:input="updateFormInput" data-key="editItem.to_phone" label="联系电话" placeholder="请输入您的电话（留空为品牌默认电话）" border="{{ false }}" />
+      <van-field value="{{editItem.to_wx}}"  autosize bind:input="updateFormInput" data-key="editItem.to_wx" model:value="" label="微信号" placeholder="请输入您的微信号（留空为品牌默认微信号）" border="{{ false }}" />
+      <van-field value="{{editItem.content}}" type="textarea" bind:input="updateFormInput" data-key="editItem.content" maxlength="50" autosize model:value="{{videoDesc}}" label="视频描述" placeholder="(50字以内)"
+        border="{{ false }}" />
+      <van-button bindtap="" color="#FF3576" bindtap="sendEditForm" custom-class="addvideo-button">保存</van-button>
+
+      <view style="height:96rpx"></view>
+
+    </view>
+  </van-popup> -->
+  <!-- 搜索的 -->
+  <van-search model:value="{{ keyWord }}" label="" placeholder="请输入搜索关键词" use-action-slot background="#181B2E" shape="round">
+    <view slot="action" style="color:#6D7278" bind:tap="getSearch">搜索</view>
+  </van-search>
+  <view class="list">
+    <view class="list-item" wx:for="{{listData}}" wx:key="{{item.video_id}}">
+      <video show-center-play-btn="{{false}}"  controls="{{false}}" object-fit="cover" mode="aspectFill"  src="{{item.url}}"></video>
+      <view class="list-item-content">
+        <view class="list-item-title" style="">
+          {{item.title}}
+        </view>
+        <view class="list-item-button" style="height:56rpx;display:flex;">
+          <view data-item="{{item}}" catchtap="editVideo" data-key="isShowAddVideo">编辑</view>
+          <view style="color:#EE0A24" data-id="{{item.video_id}}" bindtap="delMyVideo">删除</view>
+        </view>
+      </view>
+    </view>
+    <view class="bottom-nav-height"></view>
+
+  </view>
+</view>

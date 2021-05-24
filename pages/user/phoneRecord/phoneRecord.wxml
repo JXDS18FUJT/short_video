@@ -1,0 +1,24 @@
+<!--pages/user/attention/attention.wxml-->
+<view id="attention">
+  <van-search model:value="{{ keyWord }}" label="" placeholder="请输入搜索关键词" use-action-slot background="#181B2E" shape="round">
+    <view slot="action" style="color:#6D7278" bind:tap="getPage">搜索</view>
+  </van-search>
+  <view>
+    <view class="attention" wx:for="{{listData}}">
+      <image class="attention-logo" src="/static/video/xiaomi.png"></image>
+      <view class="attention-mid">
+        <view>{{item.user_id}}</view>
+        <view style="font-size:24rpx;color:#6D7278">电话号码：{{item.to_phone}}</view>
+
+      </view>
+      <view class="attention-button" data-phone="{{item.to_phone}}" bindtap="callPhone">
+        <text style="font-size:24rpx;">拨打电话</text>
+      </view>
+
+    </view>
+    
+
+  </view>
+  <custom-tab-bar selected="3"></custom-tab-bar>
+
+</view>

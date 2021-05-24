@@ -1,0 +1,122 @@
+<!--pages/user/index.wxml-->
+<view id="user">
+  <diy-edit-video formType="add" data-key="isShowAddVideo" bindsend="setShow" model:show="{{isShowAddVideo}}"></diy-edit-video>
+  <diy-add-discover model:show="{{isShowTrends}}"></diy-add-discover>
+  <!-- <van-popup  z-index="102" data-key="isShowAddVideoSelect"  position="bottom"  round   show="{{isShowAddVideoSelect}}" >
+    <van-picker title="视频状态" value-key="text" columns="{{videoStatusColumns}}"  data-key="isShowAddVideoSelect"  show-toolbar title="标题"  bind:cancel="setShow" bind:confirm="getVideoStatus" />
+  </van-popup>
+
+  <van-popup z-index="101" round show="{{ isShowAddVideo }}" position="bottom" data-key="isShowAddVideo" bind:close="setShow">
+    <view class="bookHead">
+      <text style="color:#ffffff;font-size:28rpx;">确定</text>
+      <text style="color:#323233;font-size:32rpx;font-weight:600">新增视频</text>
+      <text style="color:#969799;font-size:28rpx" bindtap="onPopupClose" data-key="isShowAddVideo"
+        data-item="productLookForm" bindtap="setShow">取消</text>
+
+    </view>
+    <view>
+      <view style="padding-left:32rpx">
+        <van-uploader bind:after-read="uploadVideo" file-list="{{addVideoList}}" accept="media" max-duration="600"></van-uploader>
+      </view>
+
+      <van-field bindtap="setShow" input-class="black" data-key="isShowAddVideoSelect" disabled label-class="black" autosize model:value="{{videoStatusName}}" label="视频状态"
+        placeholder="点击选择" border="{{ false }}" />
+      <van-field autosize model:value="" label="联系电话" placeholder="请输入您的电话（留空为品牌默认电话）" border="{{ false }}" />
+      <van-field autosize model:value="" label="微信号" placeholder="请输入您的微信号（留空为品牌默认微信号）" border="{{ false }}" />
+      <van-field type="textarea" maxlength="50" autosize model:value="{{videoDesc}}" label="视频描述" placeholder="(50字以内)"
+        border="{{ false }}" />
+      <van-button bindtap="" color="#FF3576" custom-class="addvideo-button">保存</van-button>
+
+      <view style="height:96rpx"></view>
+
+    </view>
+  </van-popup> -->
+  <view style="height:{{customNavHeight+'px'}};background:rgba(24, 27, 46, 1)">
+
+  </view>
+  <image class="headBg" src="/static/video/headBg.png"></image>
+  <view class="message">
+    <view class="message-image">
+      <image src="{{userInfo.avatar||'https://sp.gzytw.com.cn/static/mp/head.svg'}}"></image>
+    </view>
+    <view class="message-num">
+      <view>
+        <text style="margin-right:12rpx">{{userInfo.to_follower_count}}</text>
+        <text style="color:rgba(109, 114, 120, 1)">关注</text>
+      </view>
+      <view>
+        <text style="margin-right:12rpx">{{userInfo.from_record_to_wx_count}}</text>
+        <text style="color:rgba(109, 114, 120, 1)">加微信</text>
+      </view>
+      <view>
+        <text style="margin-right:12rpx">{{userInfo.from_record_to_phone_count}}</text>
+        <text style="color:rgba(109, 114, 120, 1)">来电咨询</text>
+      </view>
+    </view>
+    <view class="brand">
+      <view class="brandBox">
+        <view>
+          <view style="font-size:32rpx;">{{userInfo.nickname}}</view>
+          <view style="font-size:24rpx;color:rgba(109, 114, 120, 1);margin-top:8rpx;">手机号：{{userInfo.telphone}}</view>
+        </view>
+        <view class="">
+          <van-button bindtap="setShow" data-key="isShowAddVideo"
+            custom-style="width:344rpx;border-radius:8rpx;height:80rpx;" color="rgba(255, 53, 118, 1)">
+            <view style="display:flex">
+              <van-icon size="20" name="video-o" /><text style="margin-left:4rpx;">我要推广</text>
+            </view>
+          </van-button>
+        </view>
+
+      </view>
+
+    </view>
+    <view class="twoData">
+      <view class="singleData">
+        <view>
+          <view>账户余额</view>
+          <view style="margin-top:8rpx;color:rgba(109, 114, 120, 1);justify-content: center;">
+            <view style="display:flex;align-item:center;">
+              <text style="margin-right:4rpx;">111元</text>
+              <van-icon size="16" name="eye" />
+            </view>
+
+          </view>
+        </view>
+      </view>
+      <view class="singleData-border"></view>
+      <view class="singleData">
+        <view>
+          <view>今日数据</view>
+          <view style="margin-top:8rpx;color:rgba(109, 114, 120, 1);">
+            <view style="display:flex;align-item:center;justify-content: center;">
+              <text style="margin-right:4rpx;">9898条</text>
+              <!-- <van-icon name="eye" /> -->
+            </view>
+
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="bgBlack cell">
+      <van-cell isLink title="全部订单" value="" custom-class="bgBlack" title-class="white"></van-cell>
+      <van-cell isLink title="我的钱包" value="明细查询、提现" custom-class="bgBlack" title-class="white"></van-cell>
+      <van-cell isLink title="我的关注" url="/pages/user/attention/attention" value="关注列表" custom-class="bgBlack"
+        title-class="white"></van-cell>
+      <van-cell isLink title="视频管理" url="/pages/user/videoManage/videoManage" value="管理已发布视频" custom-class="bgBlack" title-class="white"></van-cell>
+      <!-- <van-cell isLink title="商品管理" value="管理已发布视频" border="{{false}}" custom-class="bgBlack" title-class="white">
+      </van-cell> -->
+    </view>
+    <view class="shareButton">
+      <van-button  bindtap="setShow"  data-key="isShowTrends" custom-style="width:484rpx;" color="rgba(255, 255, 255, 0.13)">
+        <view style="display:flex">
+          <text style="color:rgba(109, 114, 120, 1);margin-left:8rpx;">发布动态</text>
+        </view>
+      </van-button>
+
+    </view>
+
+
+  </view>
+
+</view>

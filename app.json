@@ -1,0 +1,91 @@
+{
+  "pages": [
+    "pages/news/index",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/user/merchant",
+    "pages/mall/index",
+    "pages/loginEntrance/loginEntrance",
+    "pages/mechantSign/mechantSign",
+    "pages/user/user",
+    "pages/user/attention/attention",
+    "pages/user/wxRecord/wxRecord",
+    "pages/user/phoneRecord/phoneRecord",
+    "pages/user/editUser/editUser",
+    "pages/user/videoManage/videoManage"
+    
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于小程序位置接口"
+    }
+    },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#999",
+    "selectedColor": "#f86b4f",
+    "borderStyle": "black",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/news/index",
+        "text": "动态"
+      },
+      {
+        "pagePath": "pages/mall/index",
+        "text": "商城"
+      },
+      {
+        "pagePath": "pages/user/merchant",
+        "text": "我的(商户)"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的(商户)"
+      }
+    ]
+  },
+  "usingComponents": {
+    "gracePage": "/graceUI/components/gracePage",
+    "graceDialog": "/graceUI/components/graceDialog",
+    "graceShade": "/graceUI/components/graceShade",
+    "custom-tab-bar": "/custom-tab-bar/index",
+    "van-tabbar": "/@vant/weapp/tabbar/index",
+    "van-tabbar-item": "/@vant/weapp/tabbar-item/index",
+    "van-tab": "/@vant/weapp/tab/index",
+    "van-tabs": "/@vant/weapp/tabs/index",
+    "van-button": "/@vant/weapp/button/index",
+    "van-popup": "/@vant/weapp/popup/index",
+    "van-field": "/@vant/weapp/field/index",
+    "van-cell": "/@vant/weapp/cell/index",
+    "van-cell-group": "/@vant/weapp/cell-group/index",
+    "van-datetime-picker": "/@vant/weapp/datetime-picker/index",
+    "van-calendar": "/@vant/weapp/calendar/index",
+    "van-radio": "/@vant/weapp/radio/index",
+    "van-radio-group": "/@vant/weapp/radio-group/index",
+    "van-picker": "/@vant/weapp/picker/index",
+    "van-tag": "/@vant/weapp/tag/index",
+    "van-icon": "/@vant/weapp/icon/index",
+    "van-search": "/@vant/weapp/search/index",
+    "van-dropdown-menu": "/@vant/weapp/dropdown-menu/index",
+    "van-dropdown-item": "/@vant/weapp/dropdown-item/index",
+    "van-uploader": "/@vant/weapp/uploader/index",
+    "van-dialog": "/@vant/weapp/dialog/index",
+    "van-loading": "/@vant/weapp/loading/index",
+    "van-empty":"/@vant/weapp/empty",
+    "van-share-sheet": "/@vant/weapp/share-sheet/index",
+    "diy-edit-video":"/components/diy_edit_video/diy_edit_video",
+    "diy-add-discover":"/components/diy_add_discover/diy_add_discover"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,54 @@
+<view class="grace-im">
+    <block wx:for="{{msgs}}" wx:key="index">
+        <view class="grace-im-msg {{userid==item.id?'grace-im-msg-right':'grace-im-msg-left'}}" wx:if="{{item.ctype==1}}">
+            <view class="face">
+                <image mode="widthFix" src="{{item.face}}"></image>
+            </view>
+            <view>
+                <view class="grace-im-name">
+                    <text wx:if="{{userid!=item.id}}">{{item.name}}</text>
+                    <text>{{item.date}}</text>
+                </view>
+                <view class="grace-im-content-in">
+                    <view class="content">{{item.msg}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="grace-im-msg {{userid==item.id?'grace-im-msg-right':'grace-im-msg-left'}}" wx:if="{{item.ctype==2}}">
+            <view class="face">
+                <image mode="widthFix" src="{{item.face}}"></image>
+            </view>
+            <view>
+                <view class="grace-im-name">
+                    <block wx:if="{{userid!=item.id}}">{{item.name}}</block>
+                    <text>{{item.date}}</text>
+                </view>
+                <view class="grace-im-content-in">
+                    <view class="imgs">
+                        <image bindtap="showImgs" data-index="{{index}}" mode="widthFix" src="{{item.msg}}"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="grace-im-msg {{userid==item.id?'grace-im-msg-right':'grace-im-msg-left'}}" wx:if="{{item.ctype==3}}">
+            <view class="face">
+                <image mode="widthFix" src="{{item.face}}"></image>
+            </view>
+            <view>
+                <view class="grace-im-name">
+                    <block wx:if="{{userid!=item.id}}">{{item.name}}</block>
+                    <text>{{item.date}}</text>
+                </view>
+                <view class="grace-im-content-in">
+                    <view bindtap="playVoice" class="content grace-im-voice-msg {{index==playIndex?'grace-im-playing':''}}" data-index="{{index}}" data-voice="{{item.msg}}" style="width:{{480*item.len/60}}rpx;">
+                        <text class="grace-iconfont icon-voice2"></text> {{item.len}}"
+          </view>
+                </view>
+            </view>
+        </view>
+        <view class="grace-im-msg" wx:if="{{item.ctype==4}}">
+            <view class="grace-im-system-msg">{{item.msg}}</view>
+        </view>
+    </block>
+    <view style="height:100rpx; width:100%"></view>
+</view>

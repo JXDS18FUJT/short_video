@@ -1,0 +1,76 @@
+/* pages/loginEntrance/loginEntrance.wxss */
+#loginEntrance {
+  width: 100vw;
+  height: 100vh;
+  background-color:transparent;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  position: absolute;
+
+
+}
+.bg{
+  width: 100vw;
+  height: 100vh;
+}
+
+.welcome-text {
+  color: rgba(255, 255, 255, 0.91);
+  font-size: 44rpx;
+  color: white;
+  margin-top: 88rpx;
+}
+
+.identify-text {
+  color: rgba(255, 255, 255, 0.91);
+  font-size: 32rpx;
+  margin-top: 16rpx;
+}
+.box{
+  width: auto;
+  margin:0 auto ;
+}
+.box>view>image{
+  width: 128rpx;
+  height: 128rpx;
+  margin: 66rpx 0 0 0;
+}
+.merchant {
+  width: 496rpx;
+  height: 320rpx;
+  background-color: rgba(255, 53, 118, 1);
+  border-radius: 32rpx;
+  margin:0 auto;
+  margin-top: 128rpx;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+.user{
+  width: 496rpx;
+  height: 320rpx;
+  background-color: rgba(0, 145, 255, 1);
+  border-radius: 32rpx;
+  margin:0 auto;
+  margin-top: 64rpx;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+
+
+
+}
+.fixed-text{
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 66rpx;
+  text-align: center;
+  color: rgba(109, 114, 120, 1);
+  font-size: 24rpx;
+  padding-bottom: env(safe-area-inset-bottom);
+}

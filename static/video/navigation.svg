@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="33px" height="34px" viewBox="0 0 33 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>navigation</title>
+    <defs>
+        <path d="M28.0666667,4.66666666 C27.8666667,4.26666666 27.5333333,3.93333331 27.1333333,3.8 C26.7333333,3.66666666 26.2666667,3.66666666 25.8666667,3.86666666 L5.33333334,13.6666667 C4.86666669,13.8666667 4.53333334,14.3333333 4.4,14.8 C4.2,15.6666667 4.8,16.6 5.66666666,16.8 L13.4666667,18.4666667 L15.1333333,26.2666667 C15.2666667,26.8 15.6,27.2 16.0666667,27.4 C16.2666667,27.5333333 16.5333333,27.5333333 16.8,27.5333333 C17.4,27.5333333 18,27.2 18.3333333,26.6 L28.1333333,6.06666666 C28.3333333,5.66666666 28.3333333,5.13333331 28.0666667,4.66666666 Z" id="path-1"></path>
+        <filter x="-29.3%" y="-21.0%" width="158.5%" height="158.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.12 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-20.9%" y="-12.6%" width="141.8%" height="142.0%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="0.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="-1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.12 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="小程序" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="短视频-首页" transform="translate(-279.000000, -501.000000)" fill-rule="nonzero">
+            <g id="navigation" transform="translate(279.000000, 501.000000)">
+                <rect id="矩形" fill="#000000" opacity="0" x="0" y="0" width="32" height="32"></rect>
+                <g id="形状">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

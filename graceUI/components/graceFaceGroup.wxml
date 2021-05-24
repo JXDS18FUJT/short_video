@@ -1,0 +1,8 @@
+<view class="grace-face-group" style="height:{{size+borderWidth*2+'rpx'}};">
+    <view catchtap="addBtnClick" class="grace-face-items" style="z-index:2; width:{{size+'rpx'}}; height:{{size+'rpx'}}; border:{{borderWidth+'rpx solid '+borderColor}};" wx:if="{{isAddBtn}}">
+        <slot></slot>
+    </view>
+    <view class="grace-face-items" style="z-index:{{1-index}}; left:{{isAddBtn?space*(index+1)+'rpx':space*index+'rpx'}}; border:{{borderWidth+'rpx solid '+borderColor}}; width:{{size+'rpx'}}; height:{{size+'rpx'}};" wx:for="{{items}}" wx:key="index">
+        <image mode="widthFix" src="{{item}}"></image>
+    </view>
+</view>

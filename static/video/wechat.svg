@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="35px" viewBox="0 0 39 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>微信 (1)</title>
+    <defs>
+        <path d="M21.356,12.03 C21.676,12.03 21.988,12.044 22.306,12.074 C21.588,7.514 17.116,4 11.704,4 C5.792,4 1,8.194 1,13.366 C1,16.258 2.5,18.844 4.852,20.564 C4.552,22.068 4.178,24.046 4.232,23.98 C4.314,23.95 6.382,22.802 7.682,22.05 C8.924,22.488 10.28,22.734 11.704,22.734 C11.854,22.734 12,22.73 12.15,22.726 C11.984,22.08 11.898,21.418 11.898,20.726 C11.896,15.924 16.13,12.03 21.356,12.03 Z M15.908,8.972 C16.648,8.972 17.246,9.57 17.246,10.308 C17.246,11.048 16.646,11.648 15.908,11.648 C15.17,11.648 14.57,11.046 14.57,10.308 C14.57,9.57 15.17,8.972 15.908,8.972 Z M7.69,11.648 C6.95,11.648 6.354,11.046 6.354,10.308 C6.354,9.57 6.952,8.972 7.69,8.972 C8.428,8.972 9.028,9.57 9.028,10.308 C9.028,11.048 8.428,11.648 7.69,11.648 L7.69,11.648 Z M31.008,20.438 C31.008,16.11 26.902,12.602 21.836,12.602 C16.768,12.602 12.66,16.112 12.66,20.438 C12.66,24.766 16.768,28.278 21.836,28.278 C23.214,28.278 24.52,28.016 25.696,27.55 C26.906,28.196 28.224,28.876 28.29,28.896 C28.336,28.946 28.076,27.68 27.794,26.402 C29.758,24.958 31.008,22.826 31.008,20.438 Z M18.394,18.718 C17.654,18.718 17.054,18.12 17.054,17.382 C17.054,16.644 17.654,16.042 18.394,16.042 C19.132,16.042 19.73,16.644 19.73,17.382 C19.73,18.12 19.132,18.718 18.394,18.718 Z M25.082,18.718 C24.344,18.718 23.742,18.12 23.742,17.382 C23.742,16.644 24.344,16.042 25.082,16.042 C25.82,16.042 26.422,16.644 26.422,17.382 C26.422,18.12 25.82,18.718 25.082,18.718 Z" id="path-1"></path>
+        <filter x="-23.3%" y="-20.1%" width="146.7%" height="156.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.12 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-16.7%" y="-12.0%" width="133.3%" height="140.2%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="0.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="-1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.05 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="小程序" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="短视频-首页" transform="translate(-320.000000, -499.000000)">
+            <g id="编组-5" transform="translate(276.000000, 324.000000)">
+                <g id="编组-3" transform="translate(45.000000, 175.104000)">
+                    <g id="微信-(1)" transform="translate(1.996000, 0.000000)">
+                        <rect id="矩形" x="0" y="0" width="32" height="32"></rect>
+                        <g id="形状" fill-rule="nonzero">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

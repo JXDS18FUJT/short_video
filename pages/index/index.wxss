@@ -1,0 +1,894 @@
+page {
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+.video-contain .poster{
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+.video-contain .poster .posterImg{
+  width: 536rpx;
+  height: 735rpx;
+  border-radius: 16rpx;
+  overflow: hidden;
+
+}
+.video-contain .poster .posterSave{
+  width: 160rpx;
+  height: 48rpx;
+  margin-top: 16rpx;
+
+}
+.wxNoDialog{
+  width: 536rpx;
+  height: 736rpx;
+  flex-flow: row wrap;
+  justify-content: center;
+  overflow: hidden;
+}
+.wxNoDialog-title{
+  margin-top: 48rpx;
+  text-align: center;
+  width: 100%;
+  line-height: 56rpx;
+  font-size: 40rpx;
+}
+.wxNoDialog-tip{
+  font-size: 24rpx;
+  text-align: center;
+  color: #6D7278;
+  margin-top: 16rpx;
+}
+.wxNoDialog-button{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12rpx;
+  margin-top: 48rpx;
+
+}
+.wxNoDialog-button>view{
+  width: 100%;
+  line-height: 40rpx;
+  color: #6D7278;
+  text-align: center;
+}
+
+.wxNoDialog-scanImg{
+  width: 400rpx;
+  height: 400rpx;
+  margin: 0 auto;
+  margin-top: 32rpx;
+  margin-left: 68rpx;
+ 
+}
+.intro{
+  position: absolute;
+  bottom: 185rpx;
+  left: 16rpx;
+  z-index: 0;
+}
+.intro-name{
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+.intro-name-text{
+  color: #fff;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  border-radius: 8rpx;
+  margin-left: 4rpx;
+  max-width: 542rpx;
+  padding-right: 16rpx;
+  min-width: 300rpx;
+}
+.intro cover-image{
+  width: 32rpx;
+  height: 32rpx;
+}
+.intro image{
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.video-contain {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+}
+
+swiper {
+  height: 100%;
+  width: 100%;
+}
+
+swiper video {
+  width: 100%;
+  height: 100%;
+}
+
+.touch-cover {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.top-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+}
+.videoSwiperItem{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.video-tools {
+  position: absolute;
+  right: 18rpx;
+  bottom: 246rpx;
+  overflow: initial;
+  width: 100rpx;
+  z-index: 99;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.video-tools .control-wrap {
+  line-height: 60rpx;
+  overflow: initial;
+  width: 100rpx;
+}
+
+.video-tools .control-wrap button::after {
+  border: 0;
+}
+
+.video-tools .item {
+  position: relative;
+  text-align: center;
+  margin-top: 30rpx;
+  background: none;
+  width: 100rpx;
+  padding: 0;
+}
+
+.video-tools .icon {
+  display: inline-block;
+  position: relative;
+  width: 64rpx;
+  height: 64rpx;
+  /* height: 56rpx; */
+  margin-bottom: 12rpx;
+  font-size: 0;
+  overflow: hidden;
+  vertical-align: middle;
+  z-index: 9999;
+}
+
+.video-tools .item .txt {
+  display: block;
+  line-height: 1;
+  font-size: 20rpx;
+  font-weight: 400;
+  height: 30rpx;
+  text-shadow: 0 0 8rpx rgba(0, 0, 0, .3);
+  color: rgba(255, 255, 255, 1);
+}
+
+.video-tools .avatar {
+  display: inline-block;
+  position: relative;
+  width: 100rpx;
+  height: 100rpx;
+  margin-bottom: 12rpx;
+  font-size: 0;
+  overflow: hidden;
+  vertical-align: middle;
+  z-index: 88;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 4rpx solid #fff;
+  background: #d8d8D8;
+}
+
+.video-tools .add {
+  position: absolute;
+  width: 30rpx;
+  height: 30rpx;
+  left: 37rpx;
+  bottom: 5rpx;
+  z-index: 99;
+}
+
+.video-disk {
+  position: fixed;
+  bottom: 122rpx;
+  right: 30rpx;
+  width: 88rpx;
+  height: 88rpx;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.video-disk .music-cover {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  box-shadow: 0 2rpx 4rpx 0 rgba(0, 0, 0, .2);
+  animation: rotate 5s linear infinite;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.video-disk .music-cover .music-disk {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+
+
+}
+
+.video-disk .music-cover .music-logo {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 100%;
+  position: absolute;
+  left: 15rpx;
+  top: 15rpx;
+  z-index: 200;
+}
+
+.video-disk .note-wrap{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.video-disk .note {
+  position: absolute;
+  width: 40rpx;
+  height: 30rpx;
+  left: -25rpx;
+  bottom: 6rpx;
+  opacity: 0;
+  z-index: 999999;
+  animation: note 1.8s linear .6s infinite;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+    transform-origin: center center;
+    -webkit-transform-origin: center center;
+  }
+
+  to {
+    transform: rotate(360deg);
+    transform-origin: center center;
+    -webkit-transform-origin: center center;
+  }
+}
+
+.video-disk .note:nth-child(2) {
+  animation: note 1.8s linear 1.2s infinite;
+}
+
+.video-disk .note:nth-child(3) {
+  animation: note 1.8s linear 1.8s infinite;
+}
+
+@keyframes note {
+  0% {
+    trnaform: translate(0, 0) rotate(0) scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translate(-24rpx, -30rpx) rotate(15deg) scale(.8);
+    opacity: .8;
+  }
+
+  100% {
+    transform: translate(-16rpx, -60rpx) rotate(30deg) scale(.6);
+    opacity: 0;
+  }
+}
+
+.video-goods {
+  width: 480rpx;
+  height: 250rpx;
+  border-radius: 8rpx;
+  background: #fff;
+  position: fixed;
+  bottom: 120rpx;
+  left: 20rpx;
+  padding: 0;
+  z-index: 99999;
+  box-sizing: border-box;
+}
+
+.video-goods cover-image {
+  width: 480rpx;
+  height: 250rpx;
+  border-radius: 8rpx;
+  overflow: hidden;
+}
+
+.video-goods .icon-hide {
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+  color: rgba(0, 0, 0, .6);
+  z-index: 99999;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.video-shop {
+  position: absolute;
+  bottom: 200rpx;
+  color: #fff;
+  font-size: 35rpx;
+  left: 40rpx;
+}
+
+.video-title {
+  position: absolute;
+  bottom: 150rpx;
+  color: #fff;
+  font-size: 30rpx;
+  left: 40rpx;
+  max-width: 500rpx;
+  text-overflow: ellipsis;
+}
+
+.video-item {
+  position: absolute;
+  bottom: 260rpx;
+  color: #fff;
+  font-size: 35rpx;
+  background: rgba(0, 0, 0, 0.6);
+  left: 30rpx;
+  padding: 10rpx 20rpx;
+  border-radius: 8rpx;
+  z-index: 888;
+  overflow: hidden;
+}
+
+.video-item .item-cart {
+  float: left;
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+
+.video-item .item-title {
+  float: left;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  max-width: 300rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.play-btn {
+  position: absolute;
+  width: 136rpx;
+  height: 136rpx;
+  top: calc(50% - 68rpx);
+  left: calc(50% - 68rpx);
+}
+
+.video-progress {
+  width: 750rpx;
+  position: fixed;
+  bottom: 96rpx;
+  left: 0;
+  z-index: 5;
+  height: 3rpx;
+  background: rgba(0, 0, 0, .1);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.video-progress .progress-inner {
+  background: rgba(255, 255, 255, .6);
+  height: 3rpx;
+}
+
+.box-alert {
+  border-top-left-radius: 4rpx !important;
+  border-top-right-radius: 4rpx !important;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.box-alert .hd {
+  width: 100%;
+}
+
+.box-alert .alert-banner {
+  width: 100%;
+  height: 230rpx;
+}
+
+.box-alert .bd {
+  padding: 40rpx 80rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  letter-spacing: 3rpx;
+}
+
+.grace-dialog-buttons {
+  padding: 0 !important;
+  font-weight: normal;
+  font-size: 34rpx;
+  color: #666;
+  background: #fff;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.grace-guide {
+  position: absolute;
+  top: 400rpx;
+  width: 500rpx;
+  left: calc(50% - 250rpx);
+  text-align: center;
+}
+
+.grace-guide .grace-alert {
+  width: 500rpx;
+  font-size: 30rpx;
+  position: absolute;
+  top: 200rpx;
+  left: 0;
+  color: #ffffff;
+}
+
+.grace-guide .grace-button {
+  position: absolute;
+  top: 400rpx;
+  width: 200rpx;
+  left: calc(50% - 100rpx);
+  border-radius: 200rpx;
+}
+
+.grace-chevron {
+  position: absolute;
+  width: 80rpx;
+  height: 15rpx;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+  left: calc(50% - 40rpx);
+}
+
+.grace-chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.grace-chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.grace-chevron:before,
+.grace-chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+
+.grace-chevron:before {
+  right: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.grace-chevron:after {
+  left: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  100% {
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+  }
+
+  67% {
+    opacity: 1;
+    transform: translateY(60rpx);
+  }
+
+  33% {
+    opacity: 1;
+    transform: translateY(80rpx);
+  }
+
+  25% {
+    opacity: 0.2;
+    transform: translateY(120rpx);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translateY(120rpx);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * 视频右侧按钮
+ */
+.cover-video-tools {
+  position: absolute;
+  right: 18rpx;
+  bottom: 246rpx;
+  overflow: initial;
+  width: 100rpx;
+  z-index: 99;
+}
+
+.cover-video-tools .cover-control-wrap {
+  line-height: 60rpx;
+  overflow: initial;
+  width: 100rpx;
+}
+
+.cover-video-tools .cover-control-wrap button::after {
+  border: 0;
+}
+
+.cover-video-tools .cover-item {
+  position: relative;
+  text-align: center;
+  margin-top: 30rpx;
+  background: none;
+  width: 100rpx;
+  padding: 0;
+}
+
+.cover-video-tools .cover-icon {
+  display: inline-block;
+  position: relative;
+  width: 64rpx;
+  height: 64rpx;
+  margin-bottom: 12rpx;
+  font-size: 0;
+  overflow: hidden;
+  vertical-align: middle;
+  z-index: 9999;
+}
+
+.cover-video-tools .cover-item .cover-txt {
+  display: block;
+  line-height: 1;
+  font-size: 20rpx;
+  font-weight: 400;
+  height: 30rpx;
+  text-shadow: 0 0 8rpx rgba(0, 0, 0, .3);
+  color: rgba(255, 255, 255, 1);
+}
+
+.cover-video-tools .cover-avatar {
+  display: inline-block;
+  position: relative;
+  width: 100rpx;
+  height: 100rpx;
+  margin-bottom: 12rpx;
+  font-size: 0;
+  overflow: hidden;
+  vertical-align: middle;
+  z-index: 88;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 4rpx solid #fff;
+  background: #d8d8D8;
+}
+
+.cover-video-tools .cover-add {
+  position: absolute;
+  width: 30rpx;
+  height: 30rpx;
+  left: 37rpx;
+  bottom: 5rpx;
+  z-index: 99;
+}
+
+
+
+
+
+
+
+
+
+
+/* 
+ * 旋转效果图标
+ */
+ .cover-video-disk-view{
+  position: absolute;
+  bottom: 122rpx;
+  right: 30rpx;
+  width: 88rpx;
+  height: 88rpx;
+}
+.cover-video-disk {
+  position: relative;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.cover-video-disk .cover-music-cover {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  box-shadow: 0 2rpx 4rpx 0 rgba(0, 0, 0, .2);
+  animation: rotate 5s linear infinite;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.cover-video-disk .cover-music-cover .cover-music-disk {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+
+
+}
+
+.cover-video-disk .cover-music-cover .cover-music-logo{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 100%;
+  position: absolute;
+  left: 15rpx;
+  top: 15rpx;
+  z-index: 5;
+}
+
+.cover-note-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 6;
+}
+
+.cover-note-wrap-view{
+  position: relative;
+  z-index: 20;
+}
+
+.cover-note {
+  position: absolute;
+  width: 40rpx;
+  height: 30rpx;
+  left: -25rpx;
+  bottom: 6rpx;
+  opacity: 0;
+  z-index: 10;
+}
+.musicIconA{
+  animation: note 1.8s linear .6s infinite;
+}
+.musicIconB {
+  animation: note 1.8s linear 1.2s infinite;
+}
+.musicIconC {
+  animation: note 1.8s linear 1.8s infinite;
+}
+
+@keyframes note {
+  0% {
+    trnaform: translate(0, 0) rotate(0) scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translate(-24rpx, -30rpx) rotate(15deg) scale(.8);
+    opacity: .8;
+  }
+
+  100% {
+    transform: translate(-16rpx, -60rpx) rotate(30deg) scale(.6);
+    opacity: 0;
+  }
+}
+
+
+
+
+.bottomAvatarView{
+  position: absolute;
+  bottom: 150rpx;
+  right: 30rpx;
+  display: flex;
+  flex-direction: column;
+  z-index: 11;
+}
+.rotateAvatar{
+  height: 88rpx;
+  width: 88rpx;
+  border-radius: 999rpx;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  animation: rotate 5s linear infinite;
+  -webkit-animation: rotate 5s infinite linear;
+  position: relative;
+}
+.rotateAvatarBgImage{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 999rpx;
+  z-index: 12;
+  
+}
+.rotateAvatarImage{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 999rpx;
+  z-index: 13;
+}
+
+.musicIcon{
+  position: absolute;
+  right: 100rpx;
+  bottom: 150rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+.musicIconView{
+  position: relative;
+  width: 80rpx;
+  height: 80rpx;
+  overflow: visible;
+}
+.musicIconImage{
+  position: absolute;
+  width: 40rpx;
+  height: 30rpx;
+  z-index: 10;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+}
+.musicIconItemA{
+  animation: note 1.8s linear .6s infinite;
+}
+.musicIconItemB {
+  animation: note 1.8s linear 1.2s infinite;
+}
+.musicIconItemC {
+  animation: note 1.8s linear 1.8s infinite;
+}
+
+
+
+.slideTipDialog{
+  position: fixed;
+
+}
+
+
+
+
+.videoFather{
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: -1!important;
+  width: 100%;
+  height: 100%;
+}

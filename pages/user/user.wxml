@@ -1,0 +1,58 @@
+<!--pages/user/index.wxml-->
+<view id="user">
+  <!-- <view style="height:{{customNavHeight+'px'}};background:rgba(24, 27, 46, 1)">
+
+  </view> -->
+  <image class="headBg" src="/static/video/headBg.png"></image>
+  <view class="message">
+    <view class="message-image">
+      <image src="{{userInfo.avatar||'https://sp.gzytw.com.cn/static/mp/head.svg'}}"></image>
+    </view>
+    <view style="margin-left:232rpx;padding-top:16rpx;">
+      <view style="color:#fff;font-size:32rpx">{{userInfo.nickname}}</view>
+      <view style="height:8rpx;"></view>
+      <text style="color:#6D7278;font-size:24rpx;">手机号：{{userInfo.telphone}}</text>
+    </view>
+  </view>
+  <view class="message-num">
+      <view>
+        <text style="margin-right:12rpx">{{userInfo.to_follower_count}}</text>
+        <text style="color:rgba(109, 114, 120, 1)">关注</text>
+      </view>
+      <view>
+        <text style="margin-right:12rpx">{{userInfo.from_record_to_wx_count}}</text>
+        <text style="color:rgba(109, 114, 120, 1)">微信记录</text>
+      </view>
+      <view>
+        <text style="margin-right:12rpx">{{userInfo.from_record_to_phone_count}}</text>
+        <text style="color:rgba(109, 114, 120, 1)">致电记录</text>
+      </view>
+    </view>
+
+
+  <view class="bgBlack cell">
+    <van-cell isLink title="全部订单" value="" custom-class="bgBlack" title-class="white"></van-cell>
+      <van-cell isLink title="我的钱包" value="明细查询、提现" custom-class="bgBlack" title-class="white"></van-cell>
+      <van-cell isLink title="我的关注" url="/pages/user/attention/attention" value="关注列表" custom-class="bgBlack"
+        title-class="white"></van-cell>
+    <!-- <van-cell isLink title="收藏夹" value="收藏的商品" border="{{false}}" custom-class="bgBlack" title-class="white"></van-cell> -->
+
+  </view>
+  <view class="shareButton">
+    <navigator url="/pages/mechantSign/mechantSign">
+      <van-button custom-style="width:484rpx;" color="rgba(255, 255, 255, 0.13)">
+      <view style="display:flex">
+        <!-- <van-icon color="rgba(109, 114, 120, 1)" name="comment-circle-o" /> -->
+        <text style="color:rgba(109, 114, 120, 1);margin-left:8rpx;">申请品牌推广</text>
+      </view>
+
+    </van-button>
+    </navigator>
+
+
+  </view>
+
+
+
+
+</view>

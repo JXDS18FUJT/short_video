@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="35px" viewBox="0 0 38 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>分享</title>
+    <defs>
+        <path d="M2.30772108,27.9433094 C2.24587603,27.9433094 2.18403099,27.9433094 2.12218594,27.9226944 C1.42127542,27.8196193 0.926515058,27.1805539 1.00897512,26.4796434 C1.64804059,20.4806739 3.77138716,16.0484456 7.29655477,13.2860336 C9.83220165,11.2863771 13.048144,10.1731663 16.8413068,9.96701614 L17.6246774,9.92578611 L17.6246774,5.65847796 C17.6246774,3.96804671 19.1708036,3.59697643 19.9954042,4.42157704 L29.6226163,14.2137093 C30.8389022,15.4506102 30.7770571,16.7287411 29.5607712,17.9656421 L20.1809393,27.5103941 C19.1914186,28.4999148 17.6246774,27.9020794 17.6246774,26.5002584 L17.6246774,21.923725 L16.6557717,21.923725 C13.1306041,21.923725 6.71933434,22.6246355 3.35908686,27.345474 C3.15293671,27.7371593 2.7406364,27.9433094 2.30772108,27.9433094 Z" id="path-1"></path>
+        <filter x="-23.7%" y="-20.8%" width="147.5%" height="158.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.12 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-16.9%" y="-12.5%" width="133.9%" height="141.7%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="0.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="-1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.05 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="小程序" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="短视频-首页" transform="translate(-320.000000, -587.000000)">
+            <g id="编组-5" transform="translate(276.000000, 324.000000)">
+                <g id="编组-4" transform="translate(46.996000, 263.104000)">
+                    <g id="分享" transform="translate(0.000000, -0.000000)">
+                        <rect id="矩形" x="0" y="0" width="32" height="32"></rect>
+                        <g id="路径" fill-rule="nonzero">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,10 @@
+<view class="grace-add-list">
+    <view class="grace-add-list-items" wx:for="{{items}}" wx:key="index">
+        <image bindtap="showImgs" data-imgurl="{{item}}" src="{{item}}"></image>
+        <view bindtap="removeImg" class="grace-add-list-remove" id="{{'grace-items-img-'+index}}" style="color:{{closeBtnColor}};"></view>
+    </view>
+    <view bindtap="addImg" class="grace-add-list-items grace-add-list-btn" wx:if="{{items.length<maxFileNumber}}">
+        <view class="grace-add-list-btn-icon">+</view>
+        <view class="grace-add-list-btn-text">{{btnName}}</view>
+    </view>
+</view>

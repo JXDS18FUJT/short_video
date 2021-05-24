@@ -1,0 +1,16 @@
+<view class="grace-select-menu-wrap">
+    <view catchtap="showMenu" class="grace-select-menu-title" id="menuMain">
+        <text>{{items[currentIndex]}}</text>
+        <text class="grace-select-menu-icon icon-allow-b" wx:if="{{!show}}"></text>
+        <text class="grace-select-menu-icon icon-allow-t" wx:if="{{show}}"></text>
+    </view>
+    <view catchtap="close" catchtouchmove="{{true}}" class="grace-select-menu" style="top : {{top+'px'}}" wx:if="{{show}}">
+        <view style="width:100%; height:92rpx;"></view>
+        <scroll-view scrollY class="grace-select-menus" style="padding:{{padding}};">
+            <view catchtap="select" class="grace-select-item {{index==currentIndex?'grace-selected':''}}" data-index="{{index}}" style="color : {{index==currentIndex?activeColor:color}};" wx:for="{{items}}" wx:key="index">
+                <text class="grace-selected-icon" wx:if="{{index==currentIndex}}"></text>
+                <text>{{item}}</text>
+            </view>
+        </scroll-view>
+    </view>
+</view>

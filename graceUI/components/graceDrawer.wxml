@@ -1,0 +1,7 @@
+<view bindtap="closeDrawer" catchtouchmove="{{true}}" class="grace-drawer-shade" style="background:{{background}};" wx:if="{{show}}">
+    <view catchtap="stopFun" catchtouchmove="" class="nav {{direction=='left'?'gdSlideLeft':'gdSlideRight'}}" style="width:{{width}};">
+        <view class="navMain" style="padding:padding">
+            <slot></slot>
+        </view>
+    </view>
+</view>

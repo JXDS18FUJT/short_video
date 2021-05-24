@@ -1,0 +1,18 @@
+.grace-select-tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.grace-select-tag {
+    height: 70rpx;
+    line-height: 70rpx;
+    text-align: center;
+    margin: 10rpx;
+    font-size: 24rpx;
+    border-radius: 8rpx;
+}
+
+.grace-checked {
+    color: #FFFFFF;
+}

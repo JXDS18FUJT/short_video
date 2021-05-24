@@ -1,0 +1,8 @@
+<view class="grace-swiper-msg">
+    <view class="grace-swiper-msg-icon {{iconClass}}" style="color:{{iconColor}}"></view>
+    <swiper autoplay="true" circular="true" interval="{{interval}}" style="height:{{height}};" vertical="{{vertical}}">
+        <swiper-item wx:for="{{msgs}}" wx:key="index">
+            <navigator openType="{{item.opentype}}" style="font-size:{{fontSize}}; font-weight:{{fontWeight}}; color:{{fontColor}}; height:{{height}}; line-height:{{height}};" url="{{item.url}}">{{item.title}}</navigator>
+        </swiper-item>
+    </swiper>
+</view>

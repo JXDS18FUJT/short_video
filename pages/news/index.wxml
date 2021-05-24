@@ -1,0 +1,33 @@
+<!--pages/news/index.wxml-->
+<view id="news">
+
+  <scroll-view scroll-y="{{true}}" id="discover" bindscrolltolower="loadDiscover">
+    <view wx:for="{{listData}}" class="list">
+      <view class="list-item">
+        <view class="name" style="">
+          <view class="row1">
+            <image src="{{item.user.avatar}}"></image>
+          </view>
+          <view class="row2">
+            <view>{{item.user.nickname}}</view>
+            <view style="color:#6D7278;font-size:24rpx;margin-top:8rpx;">{{item.updated_at}}</view>
+          </view>
+        </view>
+
+        <view class="row3">
+          <image  src="../../static/video/share0.svg" style="width:36rpx;height:36rpx"></image>
+          <button open-type="share" class="row3-share"></button>
+        </view>
+        <view class="row4">
+          <image mode="aspectFill" data-url="{{imgItem}}" bindtap="lookImage" wx:for="{{item.imgs}}" wx:for-item="imgItem" src="{{imgItem}}"></image>
+
+
+        </view>
+        <view class="row5"></view>
+
+      </view>
+
+    </view>
+    <view class="bottom-nav"></view>
+  </scroll-view>
+</view>

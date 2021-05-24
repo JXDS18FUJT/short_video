@@ -1,0 +1,34 @@
+<view class="grace-editor">
+    <textarea autoHeight bindinput="titleInput" class="grace-editor-title" placeholder="# 请输入标题" value="{{article.title}}"></textarea>
+    <view class="grace-editor-items" wx:for="{{article.contents}}" wx:key="index">
+        <textarea autoHeight bindinput="graceEditorInput" class="grace-editor-txt" data-index="{{index}}" maxlength="-1" placeholder="# 请在此处输入文本内容" value="{{item.content}}" wx:if="{{item.type=='txt'}}"></textarea>
+        <input bindinput="graceEditorInput" class="grace-editor-center" data-index="{{index}}" maxlength="-1" placeholder="# 输入居中题目" type="text" value="{{item.content}}" wx:elif="{{item.type=='center'}}"></input>
+        <view class="grace-editor-img-wrap" wx:elif="{{item.type=='img'}}">
+            <image catchtap="deleteItem" class="grace-editor-img" data-index="{{index}}" mode="widthFix" src="{{item.content}}"></image>
+            <view class="grace-editor-img-error" wx:if="{{item.error}}">
+                <view class="grace-flex-center">
+                    <text class="grace-editor-img-error-text grace-red" style="font-size:32rpx;">图片上传失败！</text>
+                </view>
+                <view class="grace-flex-center grace-margin-top">
+                    <text class="grace-editor-img-error-text grace-green">点击发布按钮重新上传</text>
+                    <text class="grace-editor-img-error-text">或</text>
+                    <text catchtap="deleteItem" class="grace-editor-img-error-text" data-index="{{index}}" style="color:#FF0036;">删除图片</text>
+                </view>
+            </view>
+        </view>
+        <textarea autoHeight bindinput="graceEditorInput" class="grace-editor-quote" data-index="{{index}}" maxlength="-1" placeholder="# 请在此处输入引用内容" value="{{item.content}}" wx:elif="{{item.type=='quote'}}"></textarea>
+        <textarea autoHeight bindinput="graceEditorInput" class="grace-editor-strong" data-index="{{index}}" maxlength="-1" placeholder="# 请在此处输入加粗内容" value="{{item.content}}" wx:elif="{{item.type=='strong'}}"></textarea>
+        <input bindinput="graceEditorInput" class="grace-editor-link" data-index="{{index}}" placeholder="# 输入连接地址" type="text" value="{{item.content}}" wx:elif="{{item.type=='link'}}"></input>
+        <text catchtap="deleteItem" class="grace-editor-spline" data-index="{{index}}" wx:elif="{{item.type=='spline'}}">● ● ●</text>
+    </view>
+    <view class="grace-space-between grace-editor-menus" style="padding-bottom:{{ipxHeight}}">
+        <view catchtap="graceEditorAddItem" class="grace-editor-icons grace-icons icon-txt" data-type="txt"></view>
+        <view catchtap="graceEditorAddItem" class="grace-editor-icons grace-icons icon-center" data-type="center"></view>
+        <view catchtap="graceEditorAddItem" class="grace-editor-icons grace-icons icon-img" data-type="img"></view>
+        <view catchtap="graceEditorAddItem" class="grace-editor-icons grace-icons icon-quote" data-type="quote"></view>
+        <view catchtap="graceEditorAddItem" class="grace-editor-icons grace-icons icon-strong" data-type="strong"></view>
+        <view catchtap="graceEditorAddItem" class="grace-editor-icons grace-icons icon-link" data-type="link"></view>
+        <view catchtap="graceEditorAddItem" class="grace-editor-icons grace-icons icon-sp-line" data-type="spline"></view>
+    </view>
+    <view style="height:200rpx; width:100%"></view>
+</view>

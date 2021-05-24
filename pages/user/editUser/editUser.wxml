@@ -1,0 +1,39 @@
+<!--pages/user/editUser/editUser.wxml-->
+<!--pages/mechantSign/mechantSign.wxml-->
+<view id="mechantSign">
+  <image src="/static/video/bg.png" class="bg"></image>
+  <view class="mechantSign">
+    <view class="form">
+      <view class="form-uploadArea" bindtap="chooseMyImage">
+        <text class="iconfont akicon-camera form-camera"></text>
+      </view>
+      <view class="form-uploadText">
+        <view style="width:240rpx">
+          <text style="font-size:24rpx">点击上传品牌图标</text>
+          <text style="font-size:24rpx">500*500像素</text>
+        </view>
+      </view>
+      <view style="height:32rpx;width:100%"></view>
+      <view style="width:100%">
+        <!-- <van-cell-group custom-class="border0"> -->
+          <van-field label-class="white" input-class="white" placeholder-style="color:rgba(109, 114, 120, 1)" value="{{ brandName }}" custom-style="background:rgba(24, 27, 46, 1)" clearable label="品牌名称" placeholder="请输入您的品牌名称（必填）" border="{{false}}" />
+          <van-field label-class="white" input-class="white" placeholder-style="color:rgba(109, 114, 120, 1)" value="{{ password }}" custom-style="background:rgba(24, 27, 46, 1)" type="text" label="品牌简介" placeholder="请输入您的品牌简介（必填）" border="{{ false }}" />
+          <van-field label-class="white" input-class="white" placeholder-style="color:rgba(109, 114, 120, 1)" value="{{ password }}" custom-style="background:rgba(24, 27, 46, 1)" type="text" label="联系人员" placeholder="请填写您的称呼（必填）" border="{{ false }}" />
+          <van-field label-class="white" input-class="white" placeholder-style="color:rgba(109, 114, 120, 1)" value="{{ password }}" custom-style="background:rgba(24, 27, 46, 1)" type="text" label="联系电话" placeholder="请填写您的联系方式（必填）" border="{{ false }}" />
+          <van-field label-class="white" input-class="white" placeholder-style="color:rgba(109, 114, 120, 1)" value="{{ password }}" custom-style="background:rgba(24, 27, 46, 1)" type="text" label="微信号" placeholder="请填写您的微信号（选填）" border="{{ false }}" />
+        <!-- </van-cell-group> -->
+      </view>
+      <view>
+        <van-button color="rgba(255, 53, 118, 1);border-radius:8rpx;" custom-class="form-submit">保存修改</van-button>
+      </view>
+
+
+      <!-- <image class="form-uploadArea" src="/static/video/icon-floor.png"></image> -->
+      <!-- <van-uploader></van-uploader> -->
+      <!-- <van-icon custom-style="width:256rpx;height:256rpx;" name="plus"></van-icon> -->
+
+    </view>
+
+  </view>
+
+</view>

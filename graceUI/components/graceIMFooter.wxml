@@ -1,0 +1,15 @@
+<view class="grace-footer">
+    <view class="grace-im-input">
+        <input fixed bindconfirm="sendTextMsg" confirmType="send" cursorSpacing="20" type="text" value="{{inputMsg}}"></input>
+    </view>
+    <view bindtap="showRec" class="grace-im-menus graceIMFonts icon-voice" style="{{recShow===true?'color:#00BA62;':''}}"></view>
+    <view bindtap="chooseImg" class="grace-im-menus graceIMFonts icon-photograph"></view>
+</view>
+<view class="grace-im-record" wx:if="{{recShow}}">
+    <view class="grace-im-record-txt">{{recTxt}}</view>
+    <view bindtap="rec" class="grace-im-record-btn {{recing?'grace-im-recording':''}}"></view>
+    <view bindtap="sendVoiceMsg" class="grace-im-record-txt" style="margin-top:12px; color:#00BA62;" wx:if="{{voiceLen>0}}">
+    发送语音
+  </view>
+    <view bindtap="closeRec" class="grace-im-record-close graceIMFonts icon-close" hidden="{{recing}}"></view>
+</view>

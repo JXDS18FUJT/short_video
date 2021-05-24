@@ -1,0 +1,20 @@
+<view catchtap="done" catchtouchmove="{{true}}" class="grace-mask" wx:if="{{show}}"></view>
+<view class="grace-keyboard" wx:if="{{show}}">
+    <view class="grace-keyboard-left">
+        <view catchtap="inputNow" class="grace-keyboard-keys" data-keynumber="1" hoverClass="keydown" hoverStayTime="100">1</view>
+        <view catchtap="inputNow" class="grace-keyboard-keys" data-keynumber="2" hoverClass="keydown" hoverStayTime="100">2</view>
+        <view catchtap="inputNow" class="grace-keyboard-keys" data-keynumber="3" hoverClass="keydown" hoverStayTime="100">3</view>
+        <view catchtap="inputNow" class="grace-keyboard-keys" data-keynumber="4" hoverClass="keydown" hoverStayTime="100">4</view>
+        <view catchtap="inputNow" class="grace-keyboard-keys" data-keynumber="5" hoverClass="keydown" hoverStayTime="100">5</view>
+        <view catchtap="inputNow" class="grace-keyboard-keys" data-keynumber="6" hoverClass="keydown" hoverStayTime="100">6</view>
+        <view catchtap="inputNow" class="grace-keyboard-keys" data-keynumber="7" hoverClass="keydown" hoverStayTime="100">7</view>
+        <view catchtap="inputNow" class="grace-keyboard-keys" data-keynumber="8" hoverClass="keydown" hoverStayTime="100">8</view>
+        <view catchtap="inputNow" class="grace-keyboard-keys" data-keynumber="9" hoverClass="keydown" hoverStayTime="100">9</view>
+        <view catchtap="inputNow" class="grace-keyboard-keys" data-keynumber="0" hoverClass="keydown" hoverStayTime="100" style="width:{{isPoint?'259rpx':'538rpx'}}">0</view>
+        <view catchtap="inputNow" class="grace-keyboard-keys" data-keynumber="." hoverClass="keydown" hoverStayTime="100" style="width:259rpx;" wx:if="{{isPoint}}">.</view>
+    </view>
+    <view class="grace-keyboard-right">
+        <view catchtap="deleteNow" class="grace-keyboard-keys grace-keyboard-delete grace-icons" hoverClass="keydown" hoverStayTime="100"></view>
+        <view catchtap="done" class="grace-keyboard-keys grace-keyboard-done">{{doneBtnName}}</view>
+    </view>
+</view>

@@ -1,0 +1,7 @@
+<!--pages/mall/index.wxml-->
+
+<van-empty
+  class="custom-image"
+  image="https://img.yzcdn.cn/vant/custom-empty-image.png"
+  description="敬请期待"
+/>

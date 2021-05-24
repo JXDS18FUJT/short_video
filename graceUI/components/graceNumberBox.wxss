@@ -1,0 +1,17 @@
+.grace-number-box {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.grace-number-box-doBtn {
+    text-align: center;
+    color: #666666;
+    flex-shrink: 0;
+}
+
+.grace-number-box-input {
+    text-align: center;
+    width: 700rpx;
+}

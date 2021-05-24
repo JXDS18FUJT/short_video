@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="480px" height="480px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 10</title>
+    <defs>
+        <circle id="path-1" cx="33.9411255" cy="33.9411255" r="24"></circle>
+    </defs>
+    <g id="小程序" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="短视频-首页" transform="translate(-315.000000, -671.000000)">
+            <g id="foot" transform="translate(336.846846, 697.153154) rotate(-45.000000) translate(-336.846846, -697.153154) translate(299.860700, 663.212029)">
+                <g id="编组-10" transform="translate(6.090040, -0.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="椭圆形" fill="#212121" transform="translate(33.941125, 33.941125) rotate(-315.000000) translate(-33.941125, -33.941125) " xlink:href="#path-1"></use>
+                    <circle id="椭圆形" stroke-opacity="0.453900957" stroke="#3D3D3D" stroke-width="0.5" mask="url(#mask-2)" transform="translate(33.941125, 33.941125) rotate(-315.000000) translate(-33.941125, -33.941125) " cx="33.9411255" cy="33.9411255" r="22.25"></circle>
+                    <g id="编组-6" mask="url(#mask-2)" fill="#333333">
+                        <g transform="translate(17.941125, 17.941125)" id="椭圆形">
+                            <circle cx="16" cy="16" r="16"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

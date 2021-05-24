@@ -1,0 +1,3 @@
+<view class="gui-segmented-Control" style="height:{{height}}; background:{{bgColor}};">
+    <view catchtap="changeSC" class="gui-segmented-Control-item" data-index="{{index}}" style="height:{{height}}; line-height:{{height}}; color:{{current==index?'#FFFFFF':color}}; background:{{current==index?color:''}}; fontSize:{{fontSize}};" wx:for="{{items}}" wx:key="index">{{item}}</view>
+</view>

@@ -1,0 +1,26 @@
+<image src="/static/video/bg.png" class="bg"></image>
+<view id="loginEntrance">
+
+  <view class="welcome-text">欢迎</view>
+  <view class="identify-text">请选择您的身份</view>
+  <view class="box">
+    <view class="merchant" data-url="/pages/mechantSign/mechantSign" bindtap="go">
+      <image src="/static/video/merchantIcon.svg"></image>
+      <view style="width:100%;text-align:center;color:white;margin-top:16rpx;">
+        <view>品牌推广</view>
+      </view>
+
+
+    </view>
+    <view bindtap="wxLogin" class="user">
+      <image src="/static/video/userIcon.svg"></image>
+      <view style="width:100%;text-align:center;color:white;margin-top:16rpx;">
+        <view>尊贵用户</view>
+        <view style="margin-top:16rpx;font-size:24rpx">直接进入</view>
+      </view>
+
+    </view>
+
+  </view>
+  <view class="fixed-text">诚为网络提供技术支持</view>
+</view>

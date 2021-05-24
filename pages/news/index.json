@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "diy_news":"/components/news/index"
+    
+  },
+  "navigationBarBackgroundColor": "#181B2E",
+  "backgroundColor": "#161823",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText":"发现"
+}

@@ -1,0 +1,4 @@
+/* pages/mall/index.wxss */
+page{
+  background-color: #181B2E;
+}

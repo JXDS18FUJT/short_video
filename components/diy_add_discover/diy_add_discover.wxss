@@ -1,0 +1,14 @@
+/* components/diy_edit_discover/diy_edit_discover.wxss */
+.bottom-nav{
+  padding-bottom: env(safe-area-inset-bottom);
+  height: 96rpx;
+}
+.bookHead{
+  width: 750rpx;
+  height: 96rpx;
+  padding: 0 32rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

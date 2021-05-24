@@ -1,0 +1,141 @@
+@import "../../global/common.wxss";
+
+.grace-editor {
+    padding: 10rpx 25rpx;
+    width: 700rpx;
+}
+
+.grace-editor-title {
+    padding: 25rpx 0;
+    border-bottom: 1px solid #F1F2F3;
+    width: 100%;
+    font-size: 36rpx;
+    font-weight: bold;
+    line-height: 50rpx;
+    background: none;
+    color: #555555;
+}
+
+.grace-editor-menus {
+    width: 700rpx;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    background-color: #F8F8F8;
+    bottom: 0;
+    border-top: 1px solid #F1F2F3;
+    padding: 0 25rpx;
+    display: flex;
+    flex-direction: row;
+}
+
+.grace-editor-icons {
+    width: 700rpx;
+    height: 88rpx;
+    color: #666666;
+    line-height: 88rpx;
+    text-align: center;
+    font-size: 38rpx!important;
+}
+
+.grace-editor-items {
+    margin-top: 10rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.grace-editor-txt {
+    background: none;
+    width: 700rpx;
+    border: none;
+    font-size: 26rpx;
+    line-height: 36rpx;
+    margin: 15rpx 0;
+}
+
+.grace-editor-center {
+    background: none;
+    width: 300rpx;
+    text-align: center;
+    border: none;
+    font-size: 28rpx;
+    color: #333333;
+    line-height: 60rpx;
+    padding: 10rpx;
+    border-bottom: 1px solid #F5F6F8;
+    font-weight: bold;
+}
+
+.grace-editor-img-wrap {
+    width: 700rpx;
+    height: 300rpx;
+    overflow: hidden;
+    margin: 10rpx 0;
+    position: relative;
+    font-size: 0;
+}
+
+.grace-editor-img {
+    width: 700rpx;
+}
+
+.grace-editor-img-error {
+    position: absolute;
+    width: 700rpx;
+    height: 300rpx;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.grace-editor-img-error-text {
+    font-size: 28rpx;
+    margin: 0 15rpx;
+    color: #FFFFFF;
+}
+
+.grace-editor-quote {
+    border: none;
+    margin: 8px 0;
+    border-radius: 8rpx;
+    width: 660rpx;
+    color: #333333;
+    background: #F8F8F8;
+    line-height: 38rpx;
+    padding: 15rpx 20rpx;
+    font-size: 26rpx;
+}
+
+.grace-editor-strong {
+    width: 700rpx;
+    background: none;
+    font-weight: bold;
+    border: none;
+    font-size: 26rpx;
+    line-height: 36rpx;
+    margin: 15rpx 0;
+}
+
+.grace-editor-link {
+    background: none;
+    width: 700rpx;
+    border: none;
+    font-size: 26rpx;
+    line-height: 36rpx;
+    margin: 15rpx 0;
+    color: #007AFF;
+}
+
+.grace-editor-spline {
+    width: 700rpx;
+    line-height: 60rpx;
+    text-align: center;
+    color: #8788A3;
+    font-size: 28rpx;
+    opacity: 0.6;
+}

@@ -1,0 +1,30 @@
+<!--pages/news/index.wxml-->
+<view id="news">
+  <view wx:for="{{listData}}" class="list">
+    <view class="list-item">
+      <view class="name" style="">
+        <view class="row1">
+          <image src="{{item.user.avatar}}"></image>
+        </view>
+        <view class="row2">
+          <view>{{item.user.nickname}}</view>
+          <view style="color:#6D7278;font-size:24rpx;margin-top:8rpx;">{{item.updated_at}}</view>
+        </view>
+      </view>
+
+      <view class="row3">
+        <van-icon size="24px" color="#fff"  name="share-o" />
+        <button open-type="share" class="row3-share"></button>
+      </view>
+      <view class="row4">
+        <image wx:for="{{item.imgs}}" wx:for-item="imgItem" src="{{imgItem}}"></image>
+
+
+      </view>
+
+    </view>
+
+  </view>
+  <view class="bottom-nav"></view>
+
+</view>

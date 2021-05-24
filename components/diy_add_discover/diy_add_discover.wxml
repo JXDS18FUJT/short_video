@@ -1,0 +1,16 @@
+<!--components/diy_edit_discover/diy_edit_discover.wxml-->
+<van-popup round position="bottom" show="{{ show }}" bind:close="setShow" data-key="show">
+  <view class="bookHead">
+    <text style="color:#ffffff;font-size:28rpx;">确定</text>
+    <text style="color:#323233;font-size:32rpx;font-weight:600">{{'新增发现'}}</text>
+    <text style="color:#969799;font-size:28rpx" bindtap="onPopupClose" data-key="show" data-item="productLookForm"
+      bindtap="setShow">取消</text>
+  </view>
+  <view style="padding-left:32rpx">
+    <van-uploader file-list="{{fileList}}" max-count="9" accept="media" image-fit="cover" bind:after-read="uploadImage" url="" upload-text="图片上传"></van-uploader>
+  </view>
+  <view style="width:100%;display:flex;justify-content:center;">
+    <van-button color="#FF3576" bindtap="sendEditForm" custom-style="width:480rpx;margin-bottom:30rpx;margin-top:30rpx;">保存</van-button>
+  </view>
+  <view class="bottom-nav"></view>
+</van-popup>
